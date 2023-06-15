@@ -1,23 +1,15 @@
-package com.validation.exception.entity;
+package com.validation.exception.dto;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 @Data
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "build")
 @NoArgsConstructor
-@Entity
-@Table(name="User")
 @ToString
-public class User {
-    @Id
-    @GeneratedValue
-    private int userId;
+public class UserRequest {
     private String name;
     private String email;
     private String mobile;
